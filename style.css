@@ -1,0 +1,27 @@
+@keyframes slideInfinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.infinite-carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.infinite-carousel {
+    display: inline-flex;
+    width: max-content;
+    animation: slideInfinite 20s linear infinite;
+}
+.infinite-carousel:hover {
+    animation-play-state: paused;
+}
+.carousel-item {
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    margin-right: 2rem;
+}
+.carousel-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
